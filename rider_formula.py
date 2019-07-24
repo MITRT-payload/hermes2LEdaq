@@ -18,17 +18,17 @@ def t_func(T_e, m, c):
     return t
 
 
-# Constants
+# Constants (use cgs)
 Z = 3                                   # Protons
 T = 200                                 # keV
 T_ergs = 3.20435e-7                     # ergs
 n_e = 1.6*10**14                        # cm^-3
 c = 2.98*10**8 *100                     # cm/s
 h_bar = 6.6261*10**-34 *100**2 *1000    # cm^2g/s
-e = 1.6022*10**-19                      # Coulombs
+e = 1.6022*10**-19 *2.998*10**9         # statcoulombs
 m_e = 9.10938*10**-31 *1000             # g
 
-# Declaritives
+# Declarative
 t_cgs = t_func(T_ergs, m_e, c)
 
 w_0_cgs = w_0_func(e, n_e, m_e, c, h_bar)
